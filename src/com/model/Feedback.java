@@ -15,6 +15,28 @@ public class Feedback {
         return String.format("Feedback by %s: %d/5 - %s", student, rating, comments);
     }
 
-    // Getters and setters
-    // ...
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getStudent() {
+        return student;
+    }
+
+    public void setStudent(String student) {
+        this.student = student;
+    }
 }

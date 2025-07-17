@@ -8,14 +8,46 @@ public class Counselor {
 
     public Counselor(String name, String surname, String specialization, String availability) {
         this.name = name;
+        this.surname = surname;
         this.specialization = specialization;
         this.availability = availability;
     }
 
-    public String getSummary() {
-        return String.format("Counselor: %s (%s) - %s", name, specialization, availability);
+    public String getName() {
+        return name;
     }
 
-    // Getters and setters
-    // ...
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public void setAvailability(String availability) {
+        this.availability = availability;
+    }
+
+    public String getSummary() {
+        return String.format("Counselor: %s (%s) - %s", name, surname, specialization, availability);
+    }
+
+
 }
