@@ -1,9 +1,11 @@
-package com.dao;
+package dao;
 
-import com.model.Counselor;
+import model.Counselor;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import com.dao.DBConnection;
+
 
 public class counselorDAO {
 

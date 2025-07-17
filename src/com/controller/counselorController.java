@@ -1,28 +1,35 @@
-package com.controller;
+package controller;
 
-import com.model.Counselor;
-import com.dao.counselorDAO;
+import model.Counselor;
+
+import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class counselorController {
-    private counselorDAO dao = new counselorDAO();
+    private final List<Counselor> counselorList = new ArrayList<>();
 
-    public void create(Counselor c) {
-        dao.addCounselor(c);
-    }
-
-    public void listAll() {
-        List<Counselor> all = dao.getAllCounselors();
-        for (Counselor c : all) {
-            System.out.println(c.getSummary());
+    public boolean validate(String name, String surname, String specialization, String availability) {
+        if (name.isEmpty() || surname.isEmpty() || specialization.isEmpty() || availability.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "All fields must be filled.", "Validation Error", JOptionPane.ERROR_MESSAGE);
+            return false;
         }
+        return true;
     }
 
-    public void delete(String name) {
-        dao.deleteCounselorByName(name);
+    public void add(String name, String surname, String specialization, String availability) {
+        counselorList.add(new Counselor(name, surname, specialization, availability));
     }
 
-    public void update(Counselor updated) {
-        dao.updateCounselor(updated);
+    public void update(int index, String name, String surname, String specialization, String availability) {
+        counselorList.set(index, new Counselor(name, surname, specialization, availability));
+    }
+
+    public void delete(int index) {
+        counselorList.remove(index);
+    }
+
+    public List<Counselor> getAll() {
+        return counselorList;
     }
 }

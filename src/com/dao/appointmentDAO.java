@@ -1,8 +1,10 @@
-package com.dao;
+package dao;
 
-import com.model.Appointment;
+import model.Appointment;
 import java.sql.*;
 import java.util.*;
+import com.dao.DBConnection;
+
 
 public class appointmentDAO {
     public void addAppointment(Appointment a) {

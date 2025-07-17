@@ -1,4 +1,4 @@
-package com.model;
+package model;
 
 public class Appointment {
     private String student;
