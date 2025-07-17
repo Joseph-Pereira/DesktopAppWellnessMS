@@ -1,6 +1,6 @@
-package dao;
+package com.dao;
 
-import model.Counselor;
+import com.model.Counselor;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

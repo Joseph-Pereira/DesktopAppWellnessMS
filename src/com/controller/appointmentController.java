@@ -1,7 +1,7 @@
-package controller;
+package com.controller;
 
-import dao.appointmentDAO;
-import model.Appointment;
+import com.dao.appointmentDAO;
+import com.model.Appointment;
 
 import java.util.*;
 

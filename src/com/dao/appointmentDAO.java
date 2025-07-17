@@ -1,6 +1,6 @@
-package dao;
+package com.dao;
 
-import model.Appointment;
+import com.model.Appointment;
 import java.sql.*;
 import java.util.*;
 

@@ -1,7 +1,7 @@
-package controller;
+package com.controller;
 
-import model.Feedback;
-import dao.feedbackDAO;
+import com.model.Feedback;
+import com.dao.feedbackDAO;
 import java.util.List;
 
 public class feedbackController {

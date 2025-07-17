@@ -1,6 +1,6 @@
-package dao;
+package com.dao;
 
-import model.Feedback;
+import com.model.Feedback;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

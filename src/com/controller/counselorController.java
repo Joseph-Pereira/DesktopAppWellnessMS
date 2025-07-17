@@ -1,7 +1,7 @@
-package controller;
+package com.controller;
 
-import model.Counselor;
-import dao.counselorDAO;
+import com.model.Counselor;
+import com.dao.counselorDAO;
 import java.util.List;
 
 public class counselorController {
