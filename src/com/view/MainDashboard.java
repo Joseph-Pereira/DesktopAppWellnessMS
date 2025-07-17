@@ -1,37 +1,24 @@
-package com.view;
+package view;
 
-import com.dao.DBConnection;
-import java.sql.Connection;
-//import com.util.DBInitialization;
 import javax.swing.*;
-import com.view.appointmentPanel;
-import com.view.feedbackPanel;
-import com.view.counselorPanel;
-import java.sql.*;
-
 
 public class MainDashboard extends JFrame {
-
     public MainDashboard() {
-        setTitle("BC Wellness Management System");
+        setTitle("Wellness Management System");
+        setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(900, 600);
         setLocationRelativeTo(null);
 
-        JTabbedPane tabbedPane = new JTabbedPane();
+        JTabbedPane tabs = new JTabbedPane();
 
-        tabbedPane.addTab("Appointments", new appointmentPanel()); 
-        tabbedPane.addTab("Counselors", new counselorPanel());
-        tabbedPane.addTab("Feedback", new feedbackPanel());        
-        
-        add(tabbedPane);
-        setVisible(true);
+        tabs.addTab("Appointments", new appointmentPanel());
+        tabs.addTab("Counselors", new counselorPanel());
+        tabs.addTab("Feedback", new feedbackPanel());
+
+        add(tabs);
     }
 
     public static void main(String[] args) {
-    javax.swing.SwingUtilities.invokeLater(() -> new MainDashboard());
-
-    
-}
-
+        SwingUtilities.invokeLater(() -> new MainDashboard().setVisible(true));
     }
+}
