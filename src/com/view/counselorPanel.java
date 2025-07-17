@@ -8,7 +8,7 @@ public class counselorPanel extends JPanel {
         setLayout(new BorderLayout());
         setBackground(Color.decode("#F5F7FA"));
 
-        JLabel title = new JLabel("👨‍⚕️ Manage Counselors", SwingConstants.CENTER);
+        JLabel title = new JLabel("Manage Counselors", SwingConstants.CENTER);
         title.setFont(new Font("Segoe UI", Font.BOLD, 24));
         title.setForeground(Color.decode("#2C3E50"));
         title.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
