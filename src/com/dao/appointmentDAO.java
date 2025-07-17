@@ -39,6 +39,29 @@ public class appointmentDAO {
         return list;
     }
 
-    // updateAppointment(), deleteAppointment() ...
+    public static void updateAppointment(int id, String status) {
+        try (Connection conn = DBUtility.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "UPDATE Appointments SET status=? WHERE id=?")) {
+            stmt.setString(1, status);
+            stmt.setInt(2, id);
+            stmt.executeUpdate();
+            System.out.println("Appointment updated.");
+        } catch (SQLException e) {
+            System.out.println("Error updating appointment: " + e.getMessage());
+        }
+    }
+    public static void deleteAppointment(int id) {
+        try (Connection conn = DBUtility.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(
+                     "DELETE FROM Appointments WHERE id=?")) {
+            stmt.setInt(1, id);
+            stmt.executeUpdate();
+            System.out.println("Appointment deleted.");
+        } catch (SQLException e) {
+            System.out.println("Error deleting appointment: " + e.getMessage());
+        }
+    }
+}
 }
 
